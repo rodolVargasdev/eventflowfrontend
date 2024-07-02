@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { LoginPage } from '../auth';
+import { LoginPage, ForgotPasswordPage, ResetPasswordPage } from '../auth';
 import { CalendarPage } from '../calendar';
 import { ReportGenerator } from '../calendar'; 
 import { useAuthStore } from '../hooks';
@@ -23,6 +23,8 @@ export const AppRouter = () => {
             {status === 'not-authenticated' ? (
                 <>
                     <Route path="/auth/*" element={<LoginPage />} />
+                    <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+                    <Route path="/reset-password" element={<ResetPasswordPage />} />
                     <Route path="/*" element={<Navigate to="/auth/login" />} />
                 </>
             ) : (

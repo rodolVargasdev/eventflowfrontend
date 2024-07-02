@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Swal from 'sweetalert2';
 import {useAuthStore, useForm} from '../../hooks';
 import './LoginPage.css';
+import { Link } from 'react-router-dom';
 
 const loginFormFields = {
     loginEmail: '',
@@ -78,6 +79,7 @@ export const LoginPage = () => {
                             />
                         </div>
                     </form>
+                    <Link to="/forgot-password"><h5>¿Olvidaste tu contraseña?</h5></Link>
                 </div>
 
                 <div className="col-md-6 login-form-2">
