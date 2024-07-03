@@ -30,36 +30,36 @@ export const ForgotPasswordPage = () => {
     };
 
     return (
-        <div className="container login-container">
-            <div className="row">
-            <div className="col-md-12 login-form-1">
-
-                <h2>Recuperar Contraseña</h2>
+<div className="container">
+    <div className="row justify-content-center align-items-center vh-100">
+        <div className="col-md-6">
+            <div className="login-form-1">
+                <h2 className="text-center mb-4">Recuperar Contraseña</h2>
                 <form onSubmit={handleSubmit}>
-                    <h4>Email:</h4>
-                    <div className="form-group mb-4 text-center">
+                    <div className="form-group mb-4">
+                        <h4>Email:</h4>
                         <input
+                            type="email"
                             className="form-control"
                             placeholder="Correo"
-                            value={ email }
+                            value={email}
                             onChange={handleEmailChange}
                             required
                         />
-
                     </div>
-                    <div className="form-group mb-2">
-
-                        <button 
-                            type="submit" 
-                            className="btn btnSubmit"
-                        >Enviar correo de recuperación</button>
-
+                    <div className="form-group">
+                        <button
+                            type="submit"
+                            className="btn btn-primary btn-block"
+                        >
+                            Enviar correo de recuperación
+                        </button>
                     </div>
                 </form>
             </div>
-
-            </div>
         </div>
+    </div>
+</div>
     );
 };
 

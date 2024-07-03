@@ -29,18 +29,31 @@ export const ResetPasswordPage = () => {
     };
 
     return (
-        <div>
-            <h2>Restablecer Contraseña</h2>
-            <form onSubmit={handleSubmit}>
-                <label>Nueva Contraseña:</label>
-                <input
-                    type="password"
-                    value={newPassword}
-                    onChange={handlePasswordChange}
-                    required
-                />
-                <button type="submit">Restablecer contraseña</button>
-            </form>
+<div className="container mt-5">
+    <div className="row justify-content-center">
+        <div className="col-md-6">
+            <div className="card">
+                <div className="card-body">
+                    <h2 className="text-center mb-4">Restablecer Contraseña</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group mb-4">
+                            <label>Nueva Contraseña:</label>
+                            <input
+                                type="password"
+                                className="form-control"
+                                value={newPassword}
+                                onChange={handlePasswordChange}
+                                required
+                            />
+                        </div>
+                        <button type="submit" className="btn btn-primary btn-block">
+                            Restablecer contraseña
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
     );
 };
