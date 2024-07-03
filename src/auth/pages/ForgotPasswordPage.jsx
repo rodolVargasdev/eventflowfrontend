@@ -21,7 +21,7 @@ export const ForgotPasswordPage = () => {
             const response = await calendarApi.post('/recovery', { email });
             if (response.data.ok) {
                 alert('Correo de recuperación fue enviado');
-                navigate('/login'); //redirigir al login
+                navigate('/login'); 
             }
 
         } catch (error) {
